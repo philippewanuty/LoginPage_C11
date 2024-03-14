@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import backgroundImg from '../../assets/images/ImagemCover.jpg';
+import { Input } from '../../Components/Input';
+
 
 export const Container = styled.div`
   display: flex;
@@ -42,7 +44,6 @@ flex-direction: column;
 margin-left: 112px;
 margin-top: 114px;
 
-
 `;
 
 
@@ -66,12 +67,12 @@ export const Textos = styled.div`
 `;
 
 export const Login = styled.div`
-
 	> button {
 		width: 384px;
 		height: 56px;
-    
-    margin-bottom: 32px;
+
+		margin-top: 32px;
+		margin-bottom: 32px;
 
 		border-style: none;
 		border-radius: 4px;
@@ -81,6 +82,12 @@ export const Login = styled.div`
 
 		font-size: 16px;
 		font-weight: 700;
+
+		cursor: pointer;
+
+		&:hover {
+			background-color: ${({ theme }) => theme.COLORS.PURPLE2};
+		}
 	}
 `;
 
@@ -90,40 +97,23 @@ export const Email = styled.div`
 	> p {
 		font-size: 14px;
 		font-weight: 600;
+		margin-bottom: 8px;
 	}
-
-	input {
-		width: 384px;
-		height: 53px;
-		margin-top: 8px;
-		margin-bottom: 16px;
-
-
-
-		padding: 16px 0 16px 12px;
-
-		border-radius: 4px;
-		border-color: ${({ theme }) => theme.COLORS.GRAY_200};
-		border-width: 1px;
-		border-style: solid;
-
-		color: ${({ theme }) => theme.COLORS.BLACK};
-
-		&::placeholder {
-			font-size: 14px;
-			font-weight: 400;
-		}
-	}
+ 
 `;
 
 export const Senha = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	> div {
+	> div:nth-child(1){
 		display: flex;
 		justify-content: space-between;
 		width: 384px;
+
+		margin-top: 16px;
+		margin-bottom: 8px;
+		
 
 		> p {
 			font-size: 14px;
@@ -137,26 +127,8 @@ export const Senha = styled.div`
 		}
 	}
 
-	input {
-		width: 384px;
-		height: 53px;
-		margin-top: 8px;
-		margin-bottom: 32px;
-
-		padding: 16px 0 16px 12px;
-
-		border-radius: 4px;
-		border-color: ${({ theme }) => theme.COLORS.GRAY_200};
-		border-width: 1px;
-		border-style: solid;
-
-		color: ${({ theme }) => theme.COLORS.BLACK};
-
-		&::placeholder {
-			font-size: 14px;
-			font-weight: 400;
-		}
-	}
+	 
+	
 `;
 
 
